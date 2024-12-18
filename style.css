@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f7f9;
+  font-family: 'Helvetica Neue', sans-serif;
+  flex-direction: column;
+  color: #333;
+}
+
+header {
+  margin-bottom: 60px;
+  
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-container {
+  perspective: 1200px;
+  margin-bottom: 20px;
+}
+
+.slider {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.face {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease-in-out;
+}
+
+.front {
+  transform: translateZ(160px);
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(160px);
+  background: linear-gradient(145deg, #e2e2e2, #cfcfcf);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(160px);
+  background: linear-gradient(145deg, #fafafa, #e6e6e6);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(160px);
+  background: linear-gradient(145deg, #ffffff, #f9f9f9);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(160px);
+  background: linear-gradient(145deg, #f7f7f7, #e0e0e0);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(160px);
+  background: linear-gradient(145deg, #e0e0e0, #d1d1d1);
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+button {
+  padding: 12px 30px;
+  background-color: #6c7a89;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 30px;
+}
+
+button:hover {
+  background-color: #4a5d6c;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
